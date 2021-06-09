@@ -1,4 +1,4 @@
-# SSH Key Rotation (AWS Cloud)
+# SSH Key Rotation. (AWS Cloud)
 [![Builds](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ---
@@ -152,7 +152,7 @@ I just pasted the key.yml
       shell: "mv {{  tmp_key }}  {{ old_key }}.pem"
 ```
 
-> key.vars is store variables actual values so Please change your values with the same and Please note that the key name doesn't need extension and please store the old key.pem file under the working directory
+> key.vars are store variables actual values so Please change your values with the same and Please note that the key name doesn't need extension and please store the old key.pem file under the working directory
 
 ```sh
 access_key: "Your access key"
@@ -165,9 +165,7 @@ tmp_key: "keypair-tmp"
 
 # Conclusion
 
-It's used for ssh key rotation on your AWS Cloud and which region and key you selected the playbook sort that key used instances and changed the SSH-Key inside the server and AWS Console on the same time
+It's used for ssh key rotation on your AWS Cloud and which region and key you selected the playbook sort that key used instances and changed the SSH-Key inside the server and AWS Console at the same time
 
 _By_
 _Yousaf K Hamza_
-
-
