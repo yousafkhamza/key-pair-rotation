@@ -1,17 +1,17 @@
-# SSH Key Roatation. (AWS Cloud)
+# SSH Key Rotation (AWS Cloud)
 [![Builds](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ---
 ## Description 
 
-It's a ansible playbook for SSH-Keypair rotation. I write a short brief when we use this: if a customer using a key for which he used all instances in single keypair. But he needs to change his key periodically with all the instances used in AWS (Also, change the key fingerprint in AWS Console).  
+It's an ansible playbook for SSH-Keypair rotation. I write a short brief when we use this: if a customer using a key for which he used all instances in a single key pair. But he needs to change his key periodically with all the instances used in AWS (Also, change the key fingerprint in AWS Console).  
 
 ---
 
 ## Feature
-- Key pair Roatation easly applicable for muliple instance in single
+- Key pair Rotation easily applicable for multiple instances in single
 - Easy to configure and use.
-- No need to mention any hosts (Inventory) Because it's genarated Dynamic Inventory appending your <old_key.pem>
+- No need to mention any hosts (Inventory) Because it's generated Dynamic Inventory appending your <old_key.pem>
 
 ---
 ## Pre-Requests 
@@ -152,20 +152,20 @@ I just pasted the key.yml
       shell: "mv {{  tmp_key }}  {{ old_key }}.pem"
 ```
 
-> key.vars is store variables actual values so Please change your values with the same and Please note that the keyname doesn't need extension and please store the old key.pem file under the working directory
+> key.vars is store variables actual values so Please change your values with the same and Please note that the key name doesn't need extension and please store the old key.pem file under the working directory
 
 ```sh
 access_key: "Your access key"
 secret_key: "<Your secret key>"
 region: "<region which one you use>"       #----------> Please let me know if you have using one key in multiple regions then I will help you to change the playbook. 
-old_key: "<KeyName which you need to change>"   #----> please past the old keyname without pem extention and store private pem file on the same directoy with 0400 permission
+old_key: "<KeyName which you need to change>"   #----> please past the old key name without pem extension and store private pem file on the same directory with 0400 permission
 tmp_key: "keypair-tmp"  
 ```
 ---
 
 # Conclusion
 
-It's used for ssh key rotation on your AWS Cloud and which region and key you selected the playbook sort that key used instances and changed the SSH-Key inside the server and AWS Console on same time
+It's used for ssh key rotation on your AWS Cloud and which region and key you selected the playbook sort that key used instances and changed the SSH-Key inside the server and AWS Console on the same time
 
 _By_
 _Yousaf K Hamza_
