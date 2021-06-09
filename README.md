@@ -29,7 +29,7 @@ It's an ansible playbook for SSH-Keypair rotation. I write a short brief when we
 - [shell](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html)
 ---
 
-# Architacture
+# Architecture
 ![alt text](https://i.ibb.co/4jPnV0C/rotation.jpg)
 
 ---
